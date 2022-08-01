@@ -1,3 +1,13 @@
+- defaults:
+    brewfile:
+      stdout: true
+      stderr: true
+      include: ['tap', 'brew', 'cask', 'mas']
+
+- brewfile:
+    # This accepts the same options as `brew bundle` command:
+    file: Brewfile
+
 - clean: []
 - link: {}
 - shell: []
