@@ -19,6 +19,9 @@ export LANG=en_US.UTF-8
 alias ls="exa"
 alias cat="bat"
 alias grep="rg"
+alias l="ls"
+alias ll="ls -l"
+alias gll='git log --graph --pretty=oneline --abbrev-commit'
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
