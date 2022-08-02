@@ -1,13 +1,22 @@
 - defaults:
     brewfile:
-      stdout: true
-      stderr: true
-      include: ['tap', 'brew', 'cask', 'mas']
+        stdout: true
+        stderr: true
+        include: ['tap', 'brew', 'cask', 'mas']
+    link:
+        create: true
+        relink: true
 
 - brewfile:
     # This accepts the same options as `brew bundle` command:
     file: Brewfile
 
 - clean: []
-- link: {}
-- shell: []
+
+- link:
+    ~/.oh-my-zsh: ohmyzsh/
+    ~/.pure: 
+    ~/.zshrc: zshrc
+
+- shell:
+    - [git submodule update --init --recursive, Installing submodules]
