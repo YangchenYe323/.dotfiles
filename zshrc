@@ -1,7 +1,8 @@
 
 export ZSH="$HOME/.oh-my-zsh"
 
-ZSH_THEME="powerlevel10k/powerlevel10k"
+# ZSH_THEME="powerlevel10k/powerlevel10k"
+ZSH_THEME=""
 
 CASE_SENSITIVE="true"
 
@@ -12,7 +13,7 @@ source $ZSH/oh-my-zsh.sh
 export LANG=en_US.UTF-8
 
 # # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+# [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # useful aliases
 alias ls="exa"
@@ -46,3 +47,7 @@ java8
 [ -f "$HOME/.ghcup/env" ] && source "/Users/yangchen/.ghcup/env" # ghcup-env
 
 [[ -s "$HOME/.gvm/scripts/gvm" ]] && source "/Users/yangchen/.gvm/scripts/gvm"
+
+source $HOME/.zsh-git-prompt/zshrc.sh
+# an example prompt
+PROMPT='%B%m%~%b$(git_super_status) %# '

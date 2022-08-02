@@ -8,6 +8,7 @@
 [submodule "ohmyzsh"]
 	path = ohmyzsh
 	url = https://github.com/ohmyzsh/ohmyzsh
-[submodule "pure"]
-	path = pure
-	url = https://github.com/sindresorhus/pure
+[submodule "zsh-git-prompt"]
+	path = zsh-git-prompt
+	url = https://github.com/olivierverdier/zsh-git-prompt.git
+	ignore = dirty

@@ -15,7 +15,7 @@
 
 - link:
     ~/.oh-my-zsh: ohmyzsh/
-    ~/.pure: 
+    ~/.zsh-git-prompt: 
     ~/.zshrc: zshrc
 
 - shell:
