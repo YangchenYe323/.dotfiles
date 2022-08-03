@@ -51,6 +51,8 @@ java8
 
 [[ -s "$HOME/.gvm/scripts/gvm" ]] && source "/Users/yangchen/.gvm/scripts/gvm"
 
+# set up zsh-git-prompt
 source $HOME/.zsh-git-prompt/zshrc.sh
-# an example prompt
-PROMPT='%B%m%~%b$(git_super_status) %# '
+
+PROMPT='%B%F{cyan}%n> %~%b$(git_super_status) %# '
+RPROMPT='%*'
