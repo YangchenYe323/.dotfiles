@@ -10,8 +10,6 @@ plugins=(git git-extras zsh-autosuggestions zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
-export LANG=en_US.UTF-8
-
 # # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 # [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
@@ -52,6 +50,7 @@ java8
 [[ -s "$HOME/.gvm/scripts/gvm" ]] && source "/Users/yangchen/.gvm/scripts/gvm"
 
 # set up zsh-git-prompt
+GIT_PROMPT_EXECUTABLE="haskell" # this requires .zsh-git-prompt to be built with haskell beforehand
 source $HOME/.zsh-git-prompt/zshrc.sh
 
 PROMPT='%B%F{cyan}%n> %~%b$(git_super_status) %# '
