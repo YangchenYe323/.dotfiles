@@ -7,6 +7,17 @@
         create: true
         relink: true
 
+- shell:
+    -   description: use zsh if not already used
+        command: |
+            if [ "$SHELL" != "/bin/zsh" ]; then
+                chsh -s /bin/zsh
+            fi 
+        stdout: true
+        stdin: true
+        quiet: false
+    - [command -v brew || /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)", Installing brew]
+
 - brewfile:
     file: Brewfile
 
@@ -19,7 +30,7 @@
     ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting: plugins/zsh-syntax-highlighting
     ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions: plugins/zsh-autosuggestions
     ~/.zsh-git-prompt: 
-    ~/.zshrc: zshrc
+    ~/.zshrc:
     ~/.spaceship-config.zsh:
     ~/Library/Application Support/Code/User/settings.json: VSCode/settings.json
 
