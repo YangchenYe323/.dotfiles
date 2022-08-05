@@ -2,6 +2,8 @@
 export ZSH="$HOME/.oh-my-zsh"
 
 ZSH_THEME="spaceship"
+# spaceship config
+source $HOME/.spaceship-config.zsh
 
 CASE_SENSITIVE="true"
 

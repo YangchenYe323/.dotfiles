@@ -21,6 +21,7 @@
     ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions: plugins/zsh-autosuggestions
     ~/.zsh-git-prompt: 
     ~/.zshrc: zshrc
+    ~/.spaceship-config.zsh:
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
