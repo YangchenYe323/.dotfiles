@@ -8,6 +8,10 @@
 [submodule "ohmyzsh"]
 	path = ohmyzsh
 	url = https://github.com/ohmyzsh/ohmyzsh
+	ignore = dirty
+[submodule "spaceship-prompt"]
+	path = spaceship-prompt
+	url = https://github.com/denysdovhan/spaceship-prompt.git
 [submodule "zsh-git-prompt"]
 	path = zsh-git-prompt
 	url = https://github.com/olivierverdier/zsh-git-prompt.git

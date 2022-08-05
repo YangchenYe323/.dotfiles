@@ -1,8 +1,7 @@
 
 export ZSH="$HOME/.oh-my-zsh"
 
-# ZSH_THEME="powerlevel10k/powerlevel10k"
-ZSH_THEME=""
+ZSH_THEME="spaceship"
 
 CASE_SENSITIVE="true"
 
@@ -53,5 +52,5 @@ java8
 GIT_PROMPT_EXECUTABLE="haskell" # this requires .zsh-git-prompt to be built with haskell beforehand
 source $HOME/.zsh-git-prompt/zshrc.sh
 
-PROMPT='%B%F{cyan}%n> %~%b$(git_super_status) %# '
-RPROMPT='%*'
+# PROMPT='%B%F{cyan}%n> %~%b$(git_super_status) %# '
+# RPROMPT='%*'
