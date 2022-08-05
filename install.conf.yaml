@@ -8,10 +8,9 @@
         relink: true
 
 - brewfile:
-    # This accepts the same options as `brew bundle` command:
     file: Brewfile
 
-- clean: []
+- clean: ['~']
 
 - link:
     ~/.oh-my-zsh: ohmyzsh/
@@ -22,6 +21,12 @@
     ~/.zsh-git-prompt: 
     ~/.zshrc: zshrc
     ~/.spaceship-config.zsh:
+    ~/Library/Application Support/Code/User/settings.json: VSCode/settings.json
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
+    - 
+        command: cat ~/.dotfiles/VSCode/vscode-extensions.list | xargs -L 1 code --install-extension
+        description: Install vscode plugins
+        stdout: false
+        quite: true
