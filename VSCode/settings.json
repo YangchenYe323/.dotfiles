@@ -3,24 +3,35 @@
   "editor.tabSize": 2,
   "editor.insertSpaces": true,
   "editor.detectIndentation": false,
-  "latex-workshop.view.pdf.viewer": "tab",
-  "workbench.colorTheme": "Bluloco Light",
-  "workbench.iconTheme": "vscode-great-icons",
-  "explorer.confirmDelete": false,
-  "svg.preview.mode": "svg",
-  "terminal.integrated.scrollback": 100000,
-  "javascript.updateImportsOnFileMove.enabled": "always",
   "editor.cursorStyle": "line",
   "editor.lineNumbers": "on",
   "editor.wordSeparators": "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-",
   "editor.wordWrap": "off",
+
+  "workbench.colorTheme": "Bluloco Light",
+  "workbench.iconTheme": "vscode-great-icons",
+
+  "explorer.confirmDelete": false,
+
+  "svg.preview.mode": "svg",
+
+  "terminal.integrated.scrollback": 100000,
+  "terminal.integrated.enableMultiLinePasteWarning": false,
+  "terminal.integrated.fontFamily": "Source Code Pro for Powerline",
+  "terminal.integrated.fontSize": 13,
+  "terminal.integrated.defaultProfile.osx": "zsh",
+  "terminal.integrated.gpuAcceleration": "canvas",
+
   "files.exclude": {
     "**/.classpath": true,
     "**/.project": true,
     "**/.settings": true,
     "**/.factorypath": true
   },
+
   "security.workspace.trust.untrustedFiles": "open",
+
+  "latex-workshop.view.pdf.viewer": "tab",
   "latex-workshop.latex.build.forceRecipeUsage": false,
   "latex-workshop.latex.recipe.default": "xelatex",
   "latex-workshop.latex.tools": [
@@ -36,13 +47,11 @@
       ]
     }
   ],
+
   "diffEditor.ignoreTrimWhitespace": false,
-  "terminal.integrated.enableMultiLinePasteWarning": false,
+
+  "javascript.updateImportsOnFileMove.enabled": "always",
   "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "terminal.integrated.fontFamily": "Source Code Pro for Powerline",
-  "terminal.integrated.fontSize": 13,
-  "terminal.integrated.defaultProfile.osx": "zsh",
-  "terminal.integrated.gpuAcceleration": "canvas"
+  }
 }
