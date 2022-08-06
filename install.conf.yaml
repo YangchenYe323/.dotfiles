@@ -8,7 +8,7 @@
         relink: true
 
 - shell:
-    -   description: use zsh if not already used
+    -   description: Using zsh if not already used
         command: |
             if [ "$SHELL" != "/bin/zsh" ]; then
                 chsh -s /bin/zsh
@@ -33,11 +33,12 @@
     ~/.zshrc:
     ~/.spaceship-config.zsh:
     ~/Library/Application Support/Code/User/settings.json: VSCode/settings.json
+    ~/Library/Application Support/Code/User/keybindings.json: VSCode/keybindings.json
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
     - 
         command: cat ~/.dotfiles/VSCode/vscode-extensions.list | xargs -L 1 code --install-extension
-        description: Install vscode plugins
+        description: Installing vscode plugins
         stdout: false
         quite: true
