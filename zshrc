@@ -15,6 +15,7 @@ source $ZSH/oh-my-zsh.sh
 alias ls="exa"
 alias cat="bat"
 alias grep="rg"
+alias ps="procs"
 alias l="ls"
 alias ll="ls -l"
 alias gll='git log --graph --pretty=oneline --abbrev-commit'

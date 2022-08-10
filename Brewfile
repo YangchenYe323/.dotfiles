@@ -14,6 +14,8 @@ brew "exa"
 brew "bat"
 # ripgrep: https://github.com/BurntSushi/ripgrep
 brew "ripgrep"
+# procs: https://github.com/dalance/procs
+brew "procs"
 # tldr: https://github.com/tldr-pages/tldr
 brew "tldr"
 # telnet
