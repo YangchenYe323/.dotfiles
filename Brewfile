@@ -6,6 +6,8 @@ cask_args appdir: "~/Applications"
 brew "git" unless system "git --version"
 # git extras
 brew "git-extras"
+# zoxide: https://github.com/ajeetdsouza/zoxide
+brew "zoxide"
 # wget
 brew "wget"
 # exa: https://github.com/ogham/exa
@@ -18,6 +20,8 @@ brew "ripgrep"
 brew "procs"
 # tldr: https://github.com/tldr-pages/tldr
 brew "tldr"
+# dust: https://github.com/bootandy/dust
+brew "dust"
 # telnet
 brew "telnet"
 

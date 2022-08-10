@@ -11,6 +11,9 @@ plugins=(git git-extras zsh-autosuggestions zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
+# initialize zoxide
+eval "$(zoxide init zsh)"
+
 # useful aliases
 alias ls="exa"
 alias cat="bat"
