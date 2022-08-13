@@ -39,18 +39,11 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
-# # Rust toolchain
-export PATH=$HOME/.cargo/bin:$HOME/.tiup/bin:$PATH
-
 # java home
 alias java8="export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_211.jdk/Contents/Home"
 alias java11="export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk-11.0.15.jdk/Contents/home"
 
 java8
-
-[ -f "$HOME/.ghcup/env" ] && source "/Users/yangchen/.ghcup/env" # ghcup-env
-
-[[ -s "$HOME/.gvm/scripts/gvm" ]] && source "/Users/yangchen/.gvm/scripts/gvm"
 
 # set up zsh-git-prompt
 GIT_PROMPT_EXECUTABLE="haskell" # this requires .zsh-git-prompt to be built with haskell beforehand

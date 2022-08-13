@@ -37,8 +37,8 @@
     ~/.zsh-git-prompt: 
     ~/.zshrc:
     ~/.spaceship-config.zsh:
-    ~/Library/Application Support/Code/User/settings.json: VSCode/settings.json
-    ~/Library/Application Support/Code/User/keybindings.json: VSCode/keybindings.json
+    ~/Library/Application Support/Code/User/settings.json: vscode/settings.json
+    ~/Library/Application Support/Code/User/keybindings.json: vscode/keybindings.json
     ~/.gitconfig:
     ~/.gitmessage:
     ~/.gitignore_global:
@@ -46,7 +46,7 @@
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
-    - command: cat ~/.dotfiles/VSCode/vscode-extensions.list | xargs -L 1 code --install-extension
+    - command: cat ~/.dotfiles/vscode/vscode-extensions.list | xargs -L 1 code --install-extension
       description: Installing vscode plugins
       stdout: false
       quite: true
