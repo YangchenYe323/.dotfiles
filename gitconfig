@@ -1,0 +1,58 @@
+[alias]
+  s = status
+	st = status --short --branch
+
+	aa = add --all
+  au = add --update
+
+	c = commit --verbose
+	ca = commit --amend --verbose
+
+[user]
+  name = Ye Yangchen
+  email = eikasia30@gmail.com
+
+[diff]
+	mnemonicPrefix = true
+	wordRegex = "[^[:space:]]|([[:alnum:]]|UTF_8_GUARD)+"
+	compactionHeuristic = true
+
+[color]
+	ui = auto
+
+[color "grep"]
+	match = cyan bold
+	selected = blue
+	context = normal
+	filename = magenta
+	linenumber = green
+	separator = yellow
+	function = blue
+
+[pretty]
+	line = "%C(auto)%h %<|(60,trunc)%s %C(green)%ad%C(auto)%d"
+	detail = "%C(auto)%h %s%n  %C(yellow)by %C(blue)%an %C(magenta)<%ae> [%G?] %C(green)%ad%n %C(auto)%d%n"
+
+[push]
+	default = upstream
+  autoSetupRemote = true
+
+[credential]
+	helper = cache --timeout=3600
+
+[grep]
+	lineNumber = true
+
+[core]
+	excludesfile = ~/.gitignore_global
+  editor = code --wait
+
+[commit]
+  template = ~/.gitmessage
+
+[http]
+  sslBackend = openssl
+
+# Allow local customizations in the .gitconfig_local file
+[include]
+	path = ~/.gitconfig_local

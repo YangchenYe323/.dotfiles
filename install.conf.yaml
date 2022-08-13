@@ -17,9 +17,14 @@
         stdin: true
         quiet: false
     - [command -v brew || /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)", Installing brew]
+    - description: Remove git softlink
+      command: rm /usr/local/bin/git
 
 - brewfile:
     file: Brewfile
+
+- shell:
+    - ["brew unlink git && brew link --overwrite git", Linking brew git]
 
 - clean: ['~']
 
@@ -34,11 +39,14 @@
     ~/.spaceship-config.zsh:
     ~/Library/Application Support/Code/User/settings.json: VSCode/settings.json
     ~/Library/Application Support/Code/User/keybindings.json: VSCode/keybindings.json
+    ~/.gitconfig:
+    ~/.gitmessage:
+    ~/.gitignore_global:
+
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
-    - 
-        command: cat ~/.dotfiles/VSCode/vscode-extensions.list | xargs -L 1 code --install-extension
-        description: Installing vscode plugins
-        stdout: false
-        quite: true
+    - command: cat ~/.dotfiles/VSCode/vscode-extensions.list | xargs -L 1 code --install-extension
+      description: Installing vscode plugins
+      stdout: false
+      quite: true

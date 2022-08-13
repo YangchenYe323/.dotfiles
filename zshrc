@@ -15,6 +15,7 @@ source $ZSH/oh-my-zsh.sh
 eval "$(zoxide init zsh)"
 
 # useful aliases
+alias cd="z"
 alias ls="exa"
 alias cat="bat"
 alias grep="rg"
@@ -54,6 +55,3 @@ java8
 # set up zsh-git-prompt
 GIT_PROMPT_EXECUTABLE="haskell" # this requires .zsh-git-prompt to be built with haskell beforehand
 source $HOME/.zsh-git-prompt/zshrc.sh
-
-# PROMPT='%B%F{cyan}%n> %~%b$(git_super_status) %# '
-# RPROMPT='%*'

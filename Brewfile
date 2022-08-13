@@ -2,8 +2,8 @@
 tap "homebrew/cask"
 # set arguments for all 'brew install --cask' commands
 cask_args appdir: "~/Applications"
-# git might be installed on the system
-brew "git" unless system "git --version"
+# git
+brew "git"
 # git extras
 brew "git-extras"
 # zoxide: https://github.com/ajeetdsouza/zoxide
