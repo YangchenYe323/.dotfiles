@@ -8,8 +8,8 @@
   "editor.wordSeparators": "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-",
   "editor.wordWrap": "off",
 
-  "workbench.colorTheme": "Bluloco Light",
-  "workbench.iconTheme": "vscode-great-icons",
+  "workbench.colorTheme": "Monokai Pro",
+  "workbench.iconTheme": "Monokai Pro Icons",
 
   "explorer.confirmDelete": false,
 
