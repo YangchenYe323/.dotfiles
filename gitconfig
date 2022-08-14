@@ -1,12 +1,16 @@
 [alias]
+  # status
   s = status
 	st = status --short --branch
-
+  # add
 	aa = add --all
   au = add --update
-
+  # commit
 	c = commit --verbose
 	ca = commit --amend --verbose
+  cm = commit --message
+  # cherry pick
+  cc = cherry-pick
 
 [user]
   name = Ye Yangchen
