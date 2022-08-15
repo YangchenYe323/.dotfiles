@@ -9,9 +9,9 @@
   "editor.wordWrap": "off",
   "editor.fontFamily": "Inconsolata",
   "editor.fontLigatures": true,
-  "editor.fontSize": 13,
+  "editor.fontSize": 13.5,
 
-  "workbench.colorTheme": "Monokai Pro (Filter Machine)",
+  "workbench.colorTheme": "One Dark Pro",
   "workbench.iconTheme": "Monokai Pro (Filter Machine) Icons",
 
   "explorer.confirmDelete": false,
