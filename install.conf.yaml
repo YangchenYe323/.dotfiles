@@ -1,14 +1,15 @@
 - defaults:
     brewfile:
-        stdout: true
-        stderr: true
         include: ['tap', 'brew', 'cask', 'mas']
     link:
         create: true
         relink: true
+        force: true
 
 - shell:
-    -   description: Using zsh if not already used
+    - description: Update Git Submodules
+      command: sudo git submodule update --recursive
+    - description: Using zsh if not already used
         command: |
             if [ "$SHELL" != "/bin/zsh" ]; then
                 sudo chsh -s /bin/zsh
@@ -17,11 +18,15 @@
         stdin: true
         quiet: false
     - [command -v brew || /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)", Installing brew]
+    - description: Brew check
+      command: brew --version
+      quiet: false
+      stdout: true
     - description: Remove git softlink
       command: rm /usr/local/bin/git
 
-- brewfile:
-    file: Brewfile
+# - brewfile:
+#     file: Brewfile
 
 - shell:
     - ["brew unlink git && brew link --overwrite git", Linking brew git]
@@ -30,23 +35,28 @@
 
 - link:
     ~/.oh-my-zsh: ohmyzsh/
+
+- link:
     ~/.oh-my-zsh/custom/themes/spaceship-prompt: spaceship-prompt/
-    ~/.oh-my-zsh/custom/themes/spaceship.zsh-theme: spaceship-prompt/spaceship.zsh-theme
+    # ~/.oh-my-zsh/custom/themes/spaceship.zsh-theme: spaceship-prompt/spaceship.zsh-theme
     ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting: plugins/zsh-syntax-highlighting
     ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions: plugins/zsh-autosuggestions
     ~/.zsh-git-prompt: 
     ~/.zshrc:
     ~/.spaceship-config.zsh:
-    ~/Library/Application Support/Code/User/settings.json: vscode/settings.json
-    ~/Library/Application Support/Code/User/keybindings.json: vscode/keybindings.json
+    # ~/Library/Application Support/Code/User/settings.json: vscode/settings.json
+    # ~/Library/Application Support/Code/User/keybindings.json: vscode/keybindings.json
     ~/.gitconfig:
     ~/.gitmessage:
     ~/.gitignore_global:
 
 
 - shell:
-    - [git submodule update --init --recursive, Installing submodules]
+    - description: Installing submodules
+      command: git submodule update --recursive --verbose
+      stdout: true
+      quiet: false
     - command: cat ~/.dotfiles/vscode/vscode-extensions.list | xargs -L 1 code --install-extension
       description: Installing vscode plugins
       stdout: false
-      quite: true
+      quiet: true

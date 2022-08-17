@@ -1,6 +1,8 @@
 name: CI
 on:
   push:
+    branches:
+      - master
   pull_request:
   schedule:
     - cron: '0 8 * * 6'
@@ -12,4 +14,6 @@ jobs:
       - run: |
           mkdir -p ~/dotfiles-install-dir
       - run: |
-          HOME=~/dotfiles-install-dir ./install
+          ls spaceship-prompt
+      - run: |
+          HOME=~/dotfiles-install-dir ./install -v
