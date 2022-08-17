@@ -11,7 +11,7 @@
     -   description: Using zsh if not already used
         command: |
             if [ "$SHELL" != "/bin/zsh" ]; then
-                chsh -s /bin/zsh
+                sudo chsh -s /bin/zsh
             fi 
         stdout: true
         stdin: true
