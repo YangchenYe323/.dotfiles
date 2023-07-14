@@ -1,8 +1,4 @@
 - defaults:
-    brewfile:
-        stdout: true
-        stderr: true
-        include: ['tap', 'brew', 'cask', 'mas']
     link:
         create: true
         relink: true
@@ -16,27 +12,12 @@
         stdout: true
         stdin: true
         quiet: false
-    - [command -v brew || /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)", Installing brew]
-    - description: Remove git softlink
-      command: rm /usr/local/bin/git
-
-- brewfile:
-    file: Brewfile
-
-- shell:
-    - ["brew unlink git && brew link --overwrite git", Linking brew git]
 
 - clean: ['~']
 
 - link:
-    ~/.oh-my-zsh: ohmyzsh/
-    ~/.oh-my-zsh/custom/themes/spaceship-prompt: spaceship-prompt/
-    ~/.oh-my-zsh/custom/themes/spaceship.zsh-theme: spaceship-prompt/spaceship.zsh-theme
-    ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting: plugins/zsh-syntax-highlighting
-    ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions: plugins/zsh-autosuggestions
     ~/.zsh-git-prompt: 
     ~/.zshrc:
-    ~/.spaceship-config.zsh:
     ~/Library/Application Support/Code/User/settings.json: vscode/settings.json
     ~/Library/Application Support/Code/User/keybindings.json: vscode/keybindings.json
     ~/.gitconfig:

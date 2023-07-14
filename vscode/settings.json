@@ -1,18 +1,17 @@
 {
   "editor.suggestSelection": "first",
-  "editor.tabSize": 2,
   "editor.insertSpaces": true,
   "editor.detectIndentation": false,
   "editor.cursorStyle": "line",
   "editor.lineNumbers": "on",
   "editor.wordSeparators": "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-",
   "editor.wordWrap": "off",
-  "editor.fontFamily": "Inconsolata",
+  "editor.fontFamily": "Iosevka",
   "editor.fontLigatures": true,
   "editor.fontSize": 13.5,
 
-  "workbench.colorTheme": "One Dark Pro",
-  "workbench.iconTheme": "Monokai Pro (Filter Machine) Icons",
+  "workbench.colorTheme": "One Monokai Dark",
+  "workbench.iconTheme": "material-icon-theme",
 
   "explorer.confirmDelete": false,
 
@@ -56,6 +55,38 @@
   "javascript.updateImportsOnFileMove.enabled": "always",
   "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
-
+  },
+  "[cpp]": {
+    "editor.defaultFormatter": "xaver.clang-format"
+  },
+  "[c]": {
+    "editor.defaultFormatter": "xaver.clang-format"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[glsl]": {
+    "editor.defaultFormatter": "raczzalan.webgl-glsl-editor"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.unicodeHighlight.invisibleCharacters": false,
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "prettier.tabWidth": 2,
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.python"
+},
+"editor.tabSize": 2,
+"[jsonc]": {
+  "editor.defaultFormatter": "esbenp.prettier-vscode"
+},
+"C_Cpp.default.cStandard": "c11",
+"C_Cpp.intelliSenseEngineFallback": "enabled",
+"C_Cpp.default.intelliSenseMode": "linux-gcc-x86"
 }
