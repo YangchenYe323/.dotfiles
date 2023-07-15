@@ -3,16 +3,6 @@
         create: true
         relink: true
 
-- shell:
-    -   description: Using zsh if not already used
-        command: |
-            if [ "$SHELL" != "/bin/zsh" ]; then
-                chsh -s /bin/zsh
-            fi 
-        stdout: true
-        stdin: true
-        quiet: false
-
 # We use rust toolchain to install a bunch of cli tools cross-platform
 - shell:
     -   description: Install rust toolchain
