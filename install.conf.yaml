@@ -23,6 +23,7 @@
               curl https://sh.rustup.rs -sSf | sh -s -- -y
               source "$HOME/.cargo/env"
             fi
+            rustup default stable
         stdout: true
         stdin: true
         quiet: false
