@@ -13,13 +13,34 @@
         stdin: true
         quiet: false
 
+- shell:
+    -   description: Install rust toolchain
+        command: |
+            if rustup -V; then
+              echo "Rust toolchain is installed"
+            else
+              curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+            fi
+        stdout: true
+        stdin: true
+        quiet: false
+
+- shell:
+  -   description: Install starship
+      command: |
+        if [ ! -f /usr/local/bin/starship ]; then
+          curl -sS https://starship.rs/install.sh | sh -s -- -y
+        fi
+      stdout: true
+      stdin: true
+      quiet: false
+
 - clean: ['~']
 
 - link:
     ~/.zsh-git-prompt: 
     ~/.zshrc:
-    ~/Library/Application Support/Code/User/settings.json: vscode/settings.json
-    ~/Library/Application Support/Code/User/keybindings.json: vscode/keybindings.json
+    ~/.starship.toml:
     ~/.gitconfig:
     ~/.gitmessage:
     ~/.gitignore_global:
@@ -27,7 +48,3 @@
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
-    - command: cat ~/.dotfiles/vscode/vscode-extensions.list | xargs -L 1 code --install-extension
-      description: Installing vscode plugins
-      stdout: false
-      quite: true

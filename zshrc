@@ -1,10 +1,14 @@
 CASE_SENSITIVE="true"
 
+export STARSHIP_CONFIG=~/.starship.toml
 # initialize starship
 eval "$(starship init zsh)"
 
 # initialize zoxide
 eval "$(zoxide init zsh)"
+
+# initialize plugins
+# source "$HOME/.plugins/zsh-autosuggestions/zsh-autosuggestions.zsh"
 
 # useful aliases
 alias cd="z"
@@ -18,10 +22,8 @@ alias gll='git log --graph --pretty=oneline --abbrev-commit'
 
 source $HOME/.zsh-git-prompt/zshrc.sh
 
-# pnpm
-export PNPM_HOME="$HOME/Library/pnpm"
-export PATH="$PNPM_HOME:$PATH"
-# pnpm end
-
-export PATH=$PATH:/usr/local/Cellar/riscv-gnu-toolchain/main/bin
+# local configs
+if [ -f "$HOME/.zshrc_local" ]; then
+  source $HOME/.zshrc_local
+fi
 
