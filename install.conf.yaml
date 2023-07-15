@@ -13,32 +13,84 @@
         stdin: true
         quiet: false
 
+# We use rust toolchain to install a bunch of cli tools cross-platform
 - shell:
     -   description: Install rust toolchain
         command: |
             if rustup -V; then
-              echo "Rust toolchain is installed"
+              echo "Rust toolchain is already installed"
             else
-              curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+              curl https://sh.rustup.rs -sSf | sh -s -- -y
+              source "$HOME/.cargo/env"
             fi
         stdout: true
         stdin: true
         quiet: false
 
 - shell:
+  -   description: Install cargo-install
+      command: |
+
+- shell:
+  -     description: Install zoxide
+        command: |
+            if ! zoxide -V; then
+              cargo install zoxide
+            fi
+        stdout: true
+        stdin: true
+        stderr: true
+        quiet: false
+
+- shell:
   -   description: Install starship
       command: |
-        if [ ! -f /usr/local/bin/starship ]; then
-          curl -sS https://starship.rs/install.sh | sh -s -- -y
+        if ! starship -V; then
+          cargo install starship
         fi
       stdout: true
       stdin: true
+      stderr: true
+      quiet: false
+
+- shell:
+  -   description: Install exa
+      command: |
+        if ! exa -v; then
+          cargo install exa
+        fi
+      stdout: true
+      stdin: true
+      stderr: true
+      quiet: false
+
+- shell:
+  -   description: Install bat
+      command: |
+        if ! bat -V; then
+          cargo install bat
+        fi
+      stdout: true
+      stdin: true
+      stderr: true
+      quiet: false
+
+- shell:
+  -   description: Install ripgrep
+      command: |
+        if ! rg -V; then
+          cargo install ripgrep
+        fi
+      stdout: true
+      stdin: true
+      stderr: true
       quiet: false
 
 - clean: ['~']
 
 - link:
     ~/.zsh-git-prompt: 
+    ~/.zsh:
     ~/.zshrc:
     ~/.starship.toml:
     ~/.gitconfig:

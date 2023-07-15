@@ -8,16 +8,18 @@ eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
 
 # initialize plugins
-# source "$HOME/.plugins/zsh-autosuggestions/zsh-autosuggestions.zsh"
+source "$HOME/.zsh/plugins/zsh-autocomplete/zsh-autocomplete.plugin.zsh"
+source "$HOME/.zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 
-# useful aliases
+# aliases
 alias cd="z"
 alias ls="exa"
 alias cat="bat"
 alias grep="rg"
-alias ps="procs"
 alias l="ls"
 alias ll="ls -l"
+alias la="ls -a"
+alias lla="ls -la"
 alias gll='git log --graph --pretty=oneline --abbrev-commit'
 
 source $HOME/.zsh-git-prompt/zshrc.sh
