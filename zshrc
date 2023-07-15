@@ -1,6 +1,6 @@
 CASE_SENSITIVE="true"
 
-export STARSHIP_CONFIG=~/.starship.toml
+export STARSHIP_CONFIG=$HOME/.starship.toml
 # initialize starship
 eval "$(starship init zsh)"
 
