@@ -19,10 +19,6 @@
         quiet: false
 
 - shell:
-  -   description: Install cargo-install
-      command: |
-
-- shell:
   -     description: Install zoxide
         command: |
             if ! zoxide -V; then
@@ -76,6 +72,17 @@
       stdin: true
       stderr: true
       quiet: false
+
+- shell:
+  -   description: Install tokei
+      command: |
+        if ! tokei -V; then
+          cargo install tokei
+        fi
+      stdout: true
+      stdin: true
+      stderr: true
+      quiet: false 
 
 - clean: ['~']
 
