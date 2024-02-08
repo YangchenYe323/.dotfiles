@@ -1,36 +1,36 @@
 - defaults:
     link:
-        create: true
-        relink: true
+      create: true
+      relink: true
 
 # We use rust toolchain to install a bunch of cli tools cross-platform
 - shell:
-    -   description: Install rust toolchain
-        command: |
-            if rustup -V; then
-              echo "Rust toolchain is already installed"
-            else
-              curl https://sh.rustup.rs -sSf | sh -s -- -y
-              source "$HOME/.cargo/env"
-            fi
-            rustup default stable
-        stdout: true
-        stdin: true
-        quiet: false
+    - description: Install rust toolchain
+      command: |
+        if rustup -V; then
+          echo "Rust toolchain is already installed"
+        else
+          curl https://sh.rustup.rs -sSf | sh -s -- -y
+          source "$HOME/.cargo/env"
+        fi
+        rustup default stable
+      stdout: true
+      stdin: true
+      quiet: false
 
 - shell:
-  -     description: Install zoxide
-        command: |
-            if ! zoxide -V; then
-              cargo install zoxide
-            fi
-        stdout: true
-        stdin: true
-        stderr: true
-        quiet: false
+    - description: Install zoxide
+      command: |
+        if ! zoxide -V; then
+          cargo install zoxide
+        fi
+      stdout: true
+      stdin: true
+      stderr: true
+      quiet: false
 
 - shell:
-  -   description: Install starship
+    - description: Install starship
       command: |
         if ! starship -V; then
           cargo install starship
@@ -41,10 +41,10 @@
       quiet: false
 
 - shell:
-  -   description: Install exa
+    - description: Install eza
       command: |
         if ! exa -v; then
-          cargo install exa
+          cargo install eza
         fi
       stdout: true
       stdin: true
@@ -52,7 +52,7 @@
       quiet: false
 
 - shell:
-  -   description: Install bat
+    - description: Install bat
       command: |
         if ! bat -V; then
           cargo install bat
@@ -63,7 +63,7 @@
       quiet: false
 
 - shell:
-  -   description: Install ripgrep
+    - description: Install ripgrep
       command: |
         if ! rg -V; then
           cargo install ripgrep
@@ -74,7 +74,7 @@
       quiet: false
 
 - shell:
-  -   description: Install tokei
+    - description: Install tokei
       command: |
         if ! tokei -V; then
           cargo install tokei
@@ -82,12 +82,12 @@
       stdout: true
       stdin: true
       stderr: true
-      quiet: false 
+      quiet: false
 
-- clean: ['~']
+- clean: ["~"]
 
 - link:
-    ~/.zsh-git-prompt: 
+    ~/.zsh-git-prompt:
     ~/.zsh:
     ~/.zshrc:
     ~/.starship.toml:

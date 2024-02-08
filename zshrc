@@ -13,7 +13,7 @@ source "$HOME/.zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 
 # aliases
 alias cd="z"
-alias ls="exa"
+alias ls="eza"
 alias cat="bat"
 alias grep="rg"
 alias l="ls"
